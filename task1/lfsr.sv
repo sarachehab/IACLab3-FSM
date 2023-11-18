@@ -11,7 +11,7 @@ module lfsr #(
     always_ff @(posedge clk, posedge rst)
 
         if (rst)
-            sreg <= 4'b1;
+            sreg <= 8'b1;
         else if (en)
             sreg <= {sreg[WIDTH-1:1], sreg[WIDTH-1]^sreg[WIDTH]};
 
